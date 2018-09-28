@@ -1,0 +1,389 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p,ul,{
+  margin:0;
+}
+body{
+  font-family: '微软雅黑';
+}
+ul{
+  list-style: none;
+}
+
+a{
+  color:black;
+  text-decoration: none;
+}
+.clear{
+  clear: both;
+}
+header{
+  width:100%;
+  margin:0 auto;
+  .top{
+    background-color: #f2f2f2;
+    .top-mess{
+      height: 33px;
+      line-height: 33px;
+      p{
+        float: left;
+        font-size: 12px;
+        color:#888888;
+        @media screen and (max-width:768px){
+          display:none;
+        }
+      }
+      .link-more{
+        float: right;
+          .phone,.qq,.weixin{
+            float: left;
+            padding:0 10px;
+            display: flex;
+            border-left: 1px solid rgb(228, 228, 228);
+            align-items: center;
+          }
+          .phone{
+            border:none;
+            a{
+              margin-left: 5px;
+              color:#e5000c;
+              font-size:16px;
+              text-decoration:none;
+            }
+          }
+          .qq,.weixin{
+            span{
+              margin-right: 5px;
+            }
+          }
+          @media screen and (max-width : 768px){
+            .qq,.weixin{
+              display:none;
+            }
+          }
+      }
+    }
+
+  }
+  .logo-nav{
+    .row{
+      padding:40px 0;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content: space-between;
+       @media screen and (max-width : 768px){
+            padding: 0;
+          }
+      .logo{
+        flex:1;
+        img,.address{
+          float: left;
+        }
+        img{
+          height: 40px;
+
+        }
+        .address{
+          margin-left:20px;
+          padding-left:20px;
+          border-left:1px solid rgb(238,238,238);
+          >p{
+            font-size:12px;
+            color:rgb(153,153,153);
+            >span{
+              padding: 0 8px;
+              border-radius: 4px;
+              background:rgb(204,204,204);
+              margin-right:10px;
+            }
+          }
+        }
+        @media screen and (max-width : 768px){
+          padding:13px 17px;
+            img{
+              height: 24px;
+            }
+            .address{
+              display:none;
+            }
+          }
+      }
+        .bread{
+          position:relative;
+          float: right;
+          font-size:20px;
+          text-align:center;
+          display:none;
+          cursor: pointer;
+          margin:8px 15px 8px 0;
+          @media screen and (max-width: 768px){
+            display:block;
+          }
+        }
+        ul{
+          display: flex;
+          flex-wrap:wrap;
+          transition:0.5s;
+
+          li{
+            text-align: center;
+            margin-left:45px;
+            a{
+              color:rgb(51,51,51);
+              font-size:16px;
+              text-decoration: none;
+              line-height:40px;
+              padding:10px 0;
+              position:relative;
+            }
+            a:hover{
+              color:#e5000c;
+            }
+          }
+          li a::after{
+            content:'';
+            display: block;
+            height: 2px;
+            width:0;
+            background-color:#e5000c;
+            position:absolute;
+            left:0;
+            bottom:4px;
+          }
+          li.active a{
+            color:#e5000c;
+          }
+          li.active a::after{
+            width:100%;
+            transition:0.5s;
+          }
+          @media screen and (min-width: 992px) and (max-width: 1200px){
+            li{
+              margin-left:35px;
+            }
+          }
+          @media screen and (min-width: 768px) and (max-width: 992px){
+            li{
+
+              margin-left:25px;
+            }
+          }
+          @media screen and (max-width: 768px){
+            width:100%;
+            display:none;
+            li{
+              margin-left:0;
+              width:100%;
+              border-bottom:1px solid #eee;
+              a{
+                line-height:45px;
+                font-size:16px;
+                padding:0;
+              }
+              a::after{
+                display:none;
+              }
+            }
+          }
+        }
+      @media screen and (max-width: 768px){
+        .menu:hover{
+          ul{
+            display:block;
+          }
+        }
+      }
+    }
+  }
+
+}
+footer{
+  width:100%;
+  .full-link{
+    width:100%;
+    border-top:1px solid rgb(225,225,225);
+    border-bottom:1px solid rgb(225,225,225);
+  }
+  .links{
+    height: 81px;
+    span{
+      display:block;
+      height: 82px;
+      width:120px;
+      line-height:82px;
+      text-align: center;
+      color:rgb(51,51,51);
+      font-size:16px;
+      float: left;
+      border-right:1px solid rgb(225,225,225);
+      border-left:1px solid rgb(225,225,225);
+    }
+    .link-more{
+      float:left;
+      height: 82px;
+      text-align: center;
+      p{
+        margin-top:15px;
+        height: 30px;
+        text-indent:20px;
+        a{
+          text-decoration:none;
+          color:rgb(51,51,51);
+          margin-left:10px;
+          font-size:12px;
+        }
+        a:hover{
+          text-decoration:underline;
+        }
+      }
+    }
+
+  }
+  .descript{
+    height: 66px;
+    overflow:hidden;
+    ul{
+      li{
+        width:12%;
+        height: 66px;
+        padding:0 10px;
+        float:left;
+        position:relative;
+        img{
+          position:absolute;
+          top:50%;
+          margin-top:-15px;
+          margin-right:10px;
+        }
+        span{
+          position:absolute;
+          top:50%;
+          margin-top:-20px;
+          left: 45px;
+          width:85px;
+          font-size:12px;
+          color:rgb(51,51,51);
+          text-align: center;
+        }
+      }
+    }
+  }
+  .full-footer{
+    width:100%;
+    height: 280px;
+    background-color:rgb(56,58,62);
+
+  }
+  .footer{
+    margin:0 auto;
+    .row{
+      display:flex;
+      height: 100%;
+      .left-area,{
+        flex:1;
+        display:flex;
+        ul{
+          flex:1;
+          margin-top:40px;
+          border-right:1px solid rgb(53,53,53);
+          li{
+            width:100%;
+            height: 25px;
+            line-height:25px;
+            text-indent:30px;
+            a{
+              color:#fff;
+              font-size:12px;
+              font-weight: 26px;
+              color:rgb(168,168,168);
+            }
+          }
+          li:first-child a{
+            font-size:16px;
+            color:rgb(226,226,226);
+          }
+        }
+      }
+      .right-area{
+        width: 30%;
+        background-image: url('../imgs/map.png');
+        background-position: 30px 5px;
+        background-repeat:no-repeat;
+        position: relative;
+        p{
+          font-size:16px;
+          color:rgb(226,226,226);
+          position: absolute;
+          top:40px;
+          left:30px;
+        }
+        .city{
+          position:absolute;
+          width:160px;
+          height: 30px;
+          bottom:40px;
+          left: 100px;
+          color:rgb(140,140,140);
+          >div{
+            float:left;
+            width:50%;
+            height:100%;
+            text-align:center;
+            position:relative;
+            a{
+              color:rgb(140,140,140);
+              font-size:14px;
+              text-decoration:none;
+            }
+            a:hover{
+              cursor:pointer;
+              color:#fff;
+              text-decoration:underline;
+            }
+            >div{
+              width:142px;
+              height: 40px;
+              line-height:30px;
+              text-align: center;
+              color:#fff;
+              position:absolute;
+              background:url('../imgs/speak.png');
+              background-size:155px 55px;
+              background-position:-6px -9px;
+              top:-40px;
+              left:-40%;
+              display:none;
+            }
+          }
+          .ShangHai>div{
+            display:block;
+          }
+        }
+      }
+    }
+
+  }
+  .copyright{
+    width:100%;
+    height: 60px;
+    line-height:60px;
+    font-size:14px;
+    color:rgb(221,221,221);
+    text-align: center;
+    background-color:rgb(34,34,34);
+  }
+  @media screen and (max-width:1200px){
+    .full-link,.descript,.full-footer{
+      display:none;
+    }
+  }
+  @media screen and (max-width:768px){
+    .copyright{
+      height: 45px;
+      line-height:45px;
+    }
+  }
+}
